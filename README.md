@@ -1,5 +1,5 @@
 # SCI
-This repository contains the code for an visitor Android app for the Science Center of Iowa.  This code is created and managed by the Des Moines Christian Hyperstream club.
+This repository contains the code for an Android visitor app for the Science Center of Iowa.  This code is created and managed by the Des Moines Christian Hyperstream club.
 
 ## Collaborators
 ### Github setup
