@@ -3,7 +3,7 @@ This repository contains the code for an Android visitor app for the Science Cen
 
 ## Collaborators
 ### Github setup
-1. Create an account at [github.com]
+1. Create an account at <github.com>
 2. Contact Daniel Wright (dwwright1987) to give him your github username, and ask to be added as collaborator.
 
 ### Git setup
