@@ -9,7 +9,7 @@ This repository contains the code for an Android visitor app for the Science Cen
 ### Git setup
 1. Download and install [Git](https://git-scm.com/).
 2. Ensure Git is setup correctly by opening a command prompt and running "git --version".
-  * If this does not work, add git installation location to your Path variable.
+  * If this does not work, add git bin installation location to your Path variable.
 3. Configure git ssh:
   1. Open Git Bash
   2. Execute "ssh-keygen -t rsa" (Do not enter a filename or password)
@@ -31,3 +31,9 @@ This repository contains the code for an Android visitor app for the Science Cen
 10. git push origin master
 11. git branch -d feature/<storie-name>
 12. git push origin --delete feature/<storie-name>
+
+## Merging app inventor project
+### Merge tool setup
+1. Install [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+2. Ensure Java is setup correctly by opening a command prompt and running "java -version".
+  * If this does not work, add java bin installation location to your Path variable.
