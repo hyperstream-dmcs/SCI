@@ -9,7 +9,7 @@ This repository contains the code for an Android visitor app for the Science Cen
 ### Git setup
 1. Download and install [Git](https://git-scm.com/).
 2. Ensure Git is setup correctly by opening a command prompt and running "git --version".
-  * If this does not work, add git installation location to your Path variable.
+  * If this does not work, add git bin installation location to your Path variable.
 3. Configure git ssh:
   1. Open Git Bash
   2. Execute "ssh-keygen -t rsa" (Do not enter a filename or password)
@@ -31,3 +31,30 @@ This repository contains the code for an Android visitor app for the Science Cen
 10. git push origin master
 11. git branch -d feature/<storie-name>
 12. git push origin --delete feature/<storie-name>
+
+## Developing feature
+1. Go to [App Inventor](http://ai2.appinventor.mit.edu) and login
+2. Go to Projects -> Import project (.aia) from my computer ...
+3. Browse to where you cloned SCI and select SCI.aia
+4. Develop feature
+
+## Merging app inventor project
+### Merge tool setup
+1. Install [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+2. Ensure Java is setup correctly by opening a command prompt and running "java -version".
+  * If this does not work, add java bin installation location to your Path variable.
+
+### Merging
+1. Create directory C:\temp\app-inventor
+2. Copy SCI.aia from git clone directory to C:\temp\app-inventor
+3. Go to App Inventor:
+  1. Go to Projects -> Export selected project (.aia) to my computer
+  2. Save as SCI-new.aia in C:\temp\app-inventor
+4. Execute AI2MergerApp at root of git clone location:
+  1. For main project browse to and load C:\temp\app-inventor\SCI.aia
+  2. For secondary project browse to and load C:\temp\app-inventor\SCI-new.aia
+  3. Merge:
+    1. On left side, check all screens
+	2. On right side, select all new assets to merge
+  4. Click merge
+  5. Save merge to root of git clone location as SCI.aia
