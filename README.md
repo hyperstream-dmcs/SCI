@@ -20,7 +20,7 @@ This repository contains the code for an Android visitor app for the Science Cen
   
 ### Git flow
 1. Fork <https://github.com/hyperstream-dmcs/SCI>
-2. git clone git@github.com:<git-username>/SCI.git
+2. git clone git@github.com:[git-username]/SCI.git
 3. git add upstream master git@github.com:hyperstream-dmcs/SCI.git
 4. git checkout -b feature/<storie-name>
 5. git commit (often while developing)
