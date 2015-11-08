@@ -1,0 +1,371 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="global_declaration" id="1" inline="false" x="26" y="14">
+    <field name="NAME">attractionSelectionTableId</field>
+    <value name="VALUE">
+      <block type="text" id="2">
+        <field name="TEXT">1dc21XycWVoBMt9JEVsGV73oewzW5A4sK9zFQjiT_</field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="3" x="26" y="52">
+    <mutation component_type="Form" instance_name="testScreen" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">testScreen</field>
+    <statement name="DO">
+      <block type="component_method" id="4">
+        <mutation component_type="FusiontablesControl" method_name="ForgetLogin" is_generic="false" instance_name="testFusiontablesControl"></mutation>
+        <field name="COMPONENT_SELECTOR">testFusiontablesControl</field>
+        <next>
+          <block type="component_set_get" id="5" inline="false">
+            <mutation component_type="FusiontablesControl" set_or_get="set" property_name="Query" is_generic="false" instance_name="testFusiontablesControl"></mutation>
+            <field name="COMPONENT_SELECTOR">testFusiontablesControl</field>
+            <field name="PROP">Query</field>
+            <value name="VALUE">
+              <block type="text_join" id="6" inline="false">
+                <mutation items="15"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="7">
+                    <field name="TEXT">SELECT Attraction_Name, Picture_Link </field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="text" id="8">
+                    <field name="TEXT">FROM </field>
+                  </block>
+                </value>
+                <value name="ADD2">
+                  <block type="text_join" id="9" inline="false">
+                    <mutation items="2"></mutation>
+                    <value name="ADD0">
+                      <block type="lexical_variable_get" id="10">
+                        <field name="VAR">global attractionSelectionTableId</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="text" id="11">
+                        <field name="TEXT"> </field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ADD3">
+                  <block type="text" id="12">
+                    <field name="TEXT">WHERE </field>
+                  </block>
+                </value>
+                <value name="ADD4">
+                  <block type="text" id="13">
+                    <field name="TEXT">Age_0to3 = 1 AND </field>
+                  </block>
+                </value>
+                <value name="ADD5">
+                  <block type="text" id="14">
+                    <field name="TEXT">Age_4to7 = 1 AND </field>
+                  </block>
+                </value>
+                <value name="ADD6">
+                  <block type="text" id="15">
+                    <field name="TEXT">Age_8to11 = 1 AND </field>
+                  </block>
+                </value>
+                <value name="ADD7">
+                  <block type="text" id="16">
+                    <field name="TEXT">Age_12to15 = 1 AND </field>
+                  </block>
+                </value>
+                <value name="ADD8">
+                  <block type="text" id="17">
+                    <field name="TEXT">Age_16beyond = 1 AND </field>
+                  </block>
+                </value>
+                <value name="ADD9">
+                  <block type="text" id="18">
+                    <field name="TEXT">Interest_Astronomy = 1 AND </field>
+                  </block>
+                </value>
+                <value name="ADD10">
+                  <block type="text" id="19">
+                    <field name="TEXT">Interest_Biology = 1 AND </field>
+                  </block>
+                </value>
+                <value name="ADD11">
+                  <block type="text" id="20">
+                    <field name="TEXT">Interest_Chemistry = 1 AND </field>
+                  </block>
+                </value>
+                <value name="ADD12">
+                  <block type="text" id="21">
+                    <field name="TEXT">Interest_Nature = 1 AND </field>
+                  </block>
+                </value>
+                <value name="ADD13">
+                  <block type="text" id="22">
+                    <field name="TEXT">Interest_Physics = 1 AND </field>
+                  </block>
+                </value>
+                <value name="ADD14">
+                  <block type="text" id="23">
+                    <field name="TEXT">Interest_Technology = 1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="component_method" id="24">
+                <mutation component_type="FusiontablesControl" method_name="SendQuery" is_generic="false" instance_name="testFusiontablesControl"></mutation>
+                <field name="COMPONENT_SELECTOR">testFusiontablesControl</field>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="25" x="33" y="577">
+    <mutation component_type="FusiontablesControl" instance_name="testFusiontablesControl" event_name="GotResult"></mutation>
+    <field name="COMPONENT_SELECTOR">testFusiontablesControl</field>
+    <statement name="DO">
+      <block type="local_declaration_statement" id="26" inline="false">
+        <mutation>
+          <localname name="queryResultList"></localname>
+        </mutation>
+        <field name="VAR0">queryResultList</field>
+        <value name="DECL0">
+          <block type="lists_from_csv_table" id="27" inline="false">
+            <value name="TEXT">
+              <block type="lexical_variable_get" id="28">
+                <mutation>
+                  <eventparam name="result"></eventparam>
+                </mutation>
+                <field name="VAR">result</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="STACK">
+          <block type="local_declaration_statement" id="29" inline="false">
+            <mutation>
+              <localname name="firstQueryResult"></localname>
+            </mutation>
+            <field name="VAR0">firstQueryResult</field>
+            <value name="DECL0">
+              <block type="lists_select_item" id="30" inline="false">
+                <value name="LIST">
+                  <block type="lexical_variable_get" id="31">
+                    <field name="VAR">queryResultList</field>
+                  </block>
+                </value>
+                <value name="NUM">
+                  <block type="math_number" id="32">
+                    <field name="NUM">2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="STACK">
+              <block type="lexical_variable_set" id="33" inline="false">
+                <field name="VAR">firstQueryResult</field>
+                <value name="VALUE">
+                  <block type="text_segment" id="34" inline="false">
+                    <value name="TEXT">
+                      <block type="lexical_variable_get" id="35">
+                        <field name="VAR">firstQueryResult</field>
+                      </block>
+                    </value>
+                    <value name="START">
+                      <block type="math_number" id="36">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                    <value name="LENGTH">
+                      <block type="math_subtract" id="37" inline="true">
+                        <value name="A">
+                          <block type="text_length" id="38" inline="false">
+                            <value name="VALUE">
+                              <block type="lexical_variable_get" id="39">
+                                <field name="VAR">firstQueryResult</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="40">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="lexical_variable_set" id="41" inline="false">
+                    <field name="VAR">firstQueryResult</field>
+                    <value name="VALUE">
+                      <block type="text_segment" id="42" inline="false">
+                        <value name="TEXT">
+                          <block type="lexical_variable_get" id="43">
+                            <field name="VAR">firstQueryResult</field>
+                          </block>
+                        </value>
+                        <value name="START">
+                          <block type="math_number" id="44">
+                            <field name="NUM">2</field>
+                          </block>
+                        </value>
+                        <value name="LENGTH">
+                          <block type="math_subtract" id="45" inline="true">
+                            <value name="A">
+                              <block type="text_length" id="46" inline="false">
+                                <value name="VALUE">
+                                  <block type="lexical_variable_get" id="47">
+                                    <field name="VAR">firstQueryResult</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="48">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="local_declaration_statement" id="49" inline="false">
+                        <mutation>
+                          <localname name="httpStart"></localname>
+                        </mutation>
+                        <field name="VAR0">httpStart</field>
+                        <value name="DECL0">
+                          <block type="text_starts_at" id="50" inline="false">
+                            <value name="TEXT">
+                              <block type="lexical_variable_get" id="51">
+                                <field name="VAR">firstQueryResult</field>
+                              </block>
+                            </value>
+                            <value name="PIECE">
+                              <block type="text" id="52">
+                                <field name="TEXT">http</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="STACK">
+                          <block type="local_declaration_statement" id="53" inline="false">
+                            <mutation>
+                              <localname name="pictureLink"></localname>
+                            </mutation>
+                            <field name="VAR0">pictureLink</field>
+                            <value name="DECL0">
+                              <block type="text_segment" id="54" inline="false">
+                                <value name="TEXT">
+                                  <block type="lexical_variable_get" id="55">
+                                    <field name="VAR">firstQueryResult</field>
+                                  </block>
+                                </value>
+                                <value name="START">
+                                  <block type="lexical_variable_get" id="56">
+                                    <field name="VAR">httpStart</field>
+                                  </block>
+                                </value>
+                                <value name="LENGTH">
+                                  <block type="math_add" id="57" inline="true">
+                                    <mutation items="2"></mutation>
+                                    <value name="NUM0">
+                                      <block type="math_subtract" id="58" inline="true">
+                                        <value name="A">
+                                          <block type="text_length" id="59" inline="false">
+                                            <value name="VALUE">
+                                              <block type="lexical_variable_get" id="60">
+                                                <field name="VAR">firstQueryResult</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="lexical_variable_get" id="61">
+                                            <field name="VAR">httpStart</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="NUM1">
+                                      <block type="math_number" id="62">
+                                        <field name="NUM">1</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="STACK">
+                              <block type="local_declaration_statement" id="63" inline="false">
+                                <mutation>
+                                  <localname name="attractionName"></localname>
+                                </mutation>
+                                <field name="VAR0">attractionName</field>
+                                <value name="DECL0">
+                                  <block type="text_trim" id="64" inline="false">
+                                    <value name="TEXT">
+                                      <block type="text_replace_all" id="65" inline="false">
+                                        <value name="TEXT">
+                                          <block type="lexical_variable_get" id="66">
+                                            <field name="VAR">firstQueryResult</field>
+                                          </block>
+                                        </value>
+                                        <value name="SEGMENT">
+                                          <block type="lexical_variable_get" id="67">
+                                            <field name="VAR">pictureLink</field>
+                                          </block>
+                                        </value>
+                                        <value name="REPLACEMENT">
+                                          <block type="text" id="68">
+                                            <field name="TEXT"></field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="STACK">
+                                  <block type="component_set_get" id="69" inline="false">
+                                    <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="testTextBox"></mutation>
+                                    <field name="COMPONENT_SELECTOR">testTextBox</field>
+                                    <field name="PROP">Text</field>
+                                    <value name="VALUE">
+                                      <block type="lexical_variable_get" id="70">
+                                        <field name="VAR">attractionName</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="component_set_get" id="71" inline="false">
+                                        <mutation component_type="Image" set_or_get="set" property_name="Picture" is_generic="false" instance_name="testImage"></mutation>
+                                        <field name="COMPONENT_SELECTOR">testImage</field>
+                                        <field name="PROP">Picture</field>
+                                        <value name="VALUE">
+                                          <block type="lexical_variable_get" id="72">
+                                            <field name="VAR">pictureLink</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                              </block>
+                            </statement>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="140" language-version="19"></yacodeblocks>
+</xml>
