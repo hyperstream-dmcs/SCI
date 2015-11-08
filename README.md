@@ -33,10 +33,13 @@ This repository contains the code for an Android visitor app for the Science Cen
 12. git push origin --delete feature/<storie-name>
 
 ## Developing feature
-1. Go to [App Inventor](http://ai2.appinventor.mit.edu) and login
-2. Go to Projects -> Import project (.aia) from my computer ...
-3. Browse to where you cloned SCI and select SCI.aia
-4. Develop feature
+1. Go to directory where you cloned project
+2. Add assets, src, and youngandroidproject directories to zip archive SCI.zip
+3. Rename SCI.zip to SCI.aia
+4. Go to [App Inventor](http://ai2.appinventor.mit.edu) and login
+5. Go to Projects -> Import project (.aia) from my computer ...
+6. Browse to where you cloned SCI and select SCI.aia
+7. Develop feature
 
 ## Merging app inventor project
 ### Merge tool setup
