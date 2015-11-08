@@ -46,4 +46,4 @@ This repository contains the code for an Android visitor app for the Science Cen
   1. Go to Projects -> Export selected project (.aia) to my computer
   2. Save as SCI.aia in C:\temp\app-inventor
 2. Extract C:\temp\app-inventor\SCI.aia
-3. Use diff tool to compare contents of files in C:\temp\app-inventor to files where you clones SCI
+3. Use [DiffMerge](https://sourcegear.com/diffmerge/index.html) to compare contents of files in C:\temp\app-inventor to files where you clones SCI
