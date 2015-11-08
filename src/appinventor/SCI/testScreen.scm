@@ -1,0 +1,4 @@
+#|
+$JSON
+{"YaVersion":"140","Source":"Form","Properties":{"$Name":"testScreen","$Type":"Form","$Version":"18","AppName":"SCI","Title":"testScreen","Uuid":"0","$Components":[{"$Name":"testTextBox","$Type":"TextBox","$Version":"5","Enabled":"False","Width":"-2","Uuid":"672159089"},{"$Name":"testImage","$Type":"Image","$Version":"1","ScalePictureToFit":"True","Uuid":"-1873783973"},{"$Name":"testFusiontablesControl","$Type":"FusiontablesControl","$Version":"3","ApiKey":"AIzaSyBw3PKK1aTbwVsraY5RhkY8Y6pNldDcWt8","KeyFile":"SCI-App-a5690e2ef757.p12","Query":"","ServiceAccountEmail":"204273704174-06td6s2qj97gfjklnfkp6a9fkrmcoo3r@developer.gserviceaccount.com","UseServiceAuthentication":"True","Uuid":"887345007"}]}}
+|#
